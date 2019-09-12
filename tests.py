@@ -51,3 +51,35 @@ print('''
                                       int(ip.split('.')[1]),
                                       int(ip.split('.')[2]),
                                       int(ip.split('.')[3]),))
+
+# 5.1 (a,c,d)
+london_co = {
+    'r1': {
+        'location': '21 New Globe Walk',
+        'vendor': 'Cisco',
+        'model': '4451',
+        'ios': '15.4',
+        'ip': '10.255.0.1'
+    },
+    'r2': {
+        'location': '21 New Globe Walk',
+        'vendor': 'Cisco',
+        'model': '4451',
+        'ios': '15.4',
+        'ip': '10.255.0.2'
+    },
+    'sw1': {
+        'location': '21 New Globe Walk',
+        'vendor': 'Cisco',
+        'model': '3850',
+        'ios': '3.6.XE',
+        'ip': '10.255.0.101',
+        'vlans': '10,20,30',
+        'routing': True
+    }
+}
+print(london_co.get(input('Введите имя устройства: ')).get(input('Введите имя параметра: ').lower(),'Такого параметра нет'))
+
+# 5.1 (b - working on it)
+# x = london_co.get(input('Введите имя устройства: '))
+# print(x.get(input('Введите имя параметра (' + str(list(x.keys())).strip('()[]').replace("'",'') +'): ').lower(),'Такого параметра нет'))
