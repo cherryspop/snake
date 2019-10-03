@@ -1,4 +1,4 @@
-def generate_access_config(intf_vlan_mapping, access_template):
+def generate_access_config(intf_vlan_mapping, access_template, psecurity = None):
     '''
     intf_vlan_mapping - словарь с соответствием интерфейс-VLAN такого вида:
         {'FastEthernet0/12':10,
